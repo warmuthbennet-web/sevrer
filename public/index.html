@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Server Management Interface</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-4">Server Management</h1>
+        <div class="mb-4">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#uploadModal">Upload File</button>
+            <button class="btn btn-secondary" data-toggle="modal" data-target="#createFolderModal">Create Folder</button>
+            <button class="btn btn-info" data-toggle="modal" data-target="#serverStatusModal">Check Server Status</button>
+        </div>
+
+        <!-- Upload File Modal -->
+        <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Upload File</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="uploadForm">
+                            <div class="form-group">
+                                <input type="file" class="form-control-file" id="fileInput" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Upload</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Create Folder Modal -->
+        <div class="modal fade" id="createFolderModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Create Folder</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="createFolderForm">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="folderName" placeholder="Folder Name" required>
+                            </div>
+                            <button type="submit" class="btn btn-secondary">Create Folder</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Server Status Modal -->
+        <div class="modal fade" id="serverStatusModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Server Status</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>The server is currently running smoothly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </div>
+</body>
+</html>
